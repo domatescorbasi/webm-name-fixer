@@ -11,13 +11,16 @@ $: ./webm-name-fixer.sh /path/to/dir
 
 # Example
 
-Before
+### Before
+
 ![alt text](https://s1.postimg.org/1afx0typq7/before.png "Before")
 
-Command
+### Command
+
 ![alt text](https://s1.postimg.org/1dziyjsflb/command.png "Command")
 
-After
+### After
+
 ![alt text](https://s1.postimg.org/3r25fr6127/after.png "After")
 
 # Warning
