@@ -12,6 +12,15 @@ fixName()
 	popd > /dev/null
 }
 
+printHelp()
+{
+	echo "[*] This is $0's help information"
+	echo "[*] This script renames webms, depending on their tags"
+	echo "[*] Usage         : $0 [DIR]"
+	echo "[*] Another usage : $0 "
+	echo "[*] Defaults to the current working directory if no path is given."
+}
+
 if [ $# -eq 0 ]; then
 	DIR="./"
 	fixName
@@ -22,14 +31,15 @@ elif [ $# -eq 1 ] && [ "$1" != -h ] && [ "$1" != --help ]; then
 		fixName
 		exit 0
 	else
-		echo "Second argument should be a directory."
+		echo "[-] Second argument should be a directory."
 		exit 1
 	fi
-else
-	echo "$0 Help."
-	echo "This script renames webms, depending on their tags"
-	echo "Usage         : $0 [DIR]"
-	echo "Another usage : $0 "
-	echo "Defaults to the current working directory if no path is given."
+elif [ $# -ge 2 ]; then
+	echo "[-] Illegal number of arguments."
+	echo ""
+	printHelp
 	exit 1
+else
+	printHelp
+	exit 0
 fi
